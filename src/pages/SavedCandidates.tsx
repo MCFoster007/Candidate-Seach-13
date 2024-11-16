@@ -1,75 +1,62 @@
-const SavedCandidates = () => {
-  return (
-    <>
-      <h1>Potential Candidates</h1>
-    </>
-  );
-};
-
-import type React from 'react';
 import { useEffect, useState } from 'react';
-import CandidatesToWatchList from '../components/CandidatesToWatchList';
-// TODO: Uncomment when Film interface is added
-// import type Film from '../utils/interfaces/Film.interface';
+import CandidateSearch from './pages/CandidateSearch.tsx';
+import type Candidate from '../utils/interfaces/Candidate.interface';
+import CandidateCard from './components/CandidateCard';
 
-const WatchList = () => {
-  // TODO: Add Film interface to state variable
-  const [filmsToWatch, setFilmsToWatch] = useState([]);
+const SavedList = () => {
+  
+  const [candidatesToSave, setCandidatesToSave] = useState<Candidate[]>([]);
 
-  // TODO: Add correct types to the following parameters
   const removeFromStorage = (
-    e,
-    currentlyOnWatchList,
-    currentlyOnSeenItList,
-    title
+    e: React.MouseEvent<HTMLButtonElement>,
+    currentlyOnSaveList: boolean,
+    currentlyOnSavedList: boolean,
+    name: string
   ) => {
     e.preventDefault();
-    if (currentlyOnWatchList) {
-      // TODO: Add Film interface
-      let parsedFilmsToWatch = [];
-
-      const storedFilmsToWatch = localStorage.getItem('filmsToWatch');
+    if (currentlyOnSaveList) {
+      let parsedFilmsToWatch: Candidate[] = [];
+      const storedFilmsToWatch = localStorage.getItem('CandidatesToSave');
       if (typeof storedFilmsToWatch === 'string') {
         parsedFilmsToWatch = JSON.parse(storedFilmsToWatch);
       }
-      parsedFilmsToWatch = parsedFilmsToWatch.filter(
-        (film) => film.Title !== title
+      const updatedCandidates = parsedFilmsToWatch.filter(
+        (candidate) => candidate.Name !== name
       );
-      setFilmsToWatch(parsedFilmsToWatch);
-      localStorage.setItem('filmsToWatch', JSON.stringify(parsedFilmsToWatch));
-    } else if (currentlyOnSeenItList) {
-      // TODO: Add Film interface
-      let parsedAlreadySeenFilms = [];
-      const storedAlreadySeenFilms = localStorage.getItem('alreadySeenFilms');
-      if (typeof storedAlreadySeenFilms === 'string') {
-        parsedAlreadySeenFilms = JSON.parse(storedAlreadySeenFilms);
+      setCandidatesToSave(updatedCandidates);
+      localStorage.setItem('CandidatesToSave', JSON.stringify(updatedCandidates));
+    } else if (currentlyOnSavedList) {
+      let parsedAlreadySavedCandidates: Candidate[] = [];
+      const storedAlreadySavedCandidates = localStorage.getItem('alreadySavedCandidates');
+      if (typeof storedAlreadySavedCandidates === 'string') {
+        parsedAlreadySavedCandidates = JSON.parse(storedAlreadySavedCandidates);
       }
-      parsedAlreadySeenFilms = parsedAlreadySeenFilms.filter(
-        (film) => film.Title !== title
+      const updatedSavedCandidates = parsedAlreadySavedCandidates.filter(
+        (candidate) => candidate.Name !== name
       );
       localStorage.setItem(
-        'alreadySeenFilms',
-        JSON.stringify(parsedAlreadySeenFilms)
+        'alreadySavedCandidates',
+        JSON.stringify(updatedSavedCandidates)
       );
     }
   };
 
   useEffect(() => {
-    const parsedFilmsToWatch = JSON.parse(
-      // TODO: Add correct type assertion
-      localStorage.getItem('filmsToWatch')
-    );
-    setFilmsToWatch(parsedFilmsToWatch);
+    const storedCandidates = localStorage.getItem('CandidatesToSave');
+    if (storedCandidates) {
+      const parsedCandidatesToSave = JSON.parse(storedCandidates);
+      setCandidatesToSave(parsedCandidatesToSave);
+    }
   }, []);
 
   return (
     <>
-      <h1 className='pageHeader'>Watch List</h1>
-      {(!filmsToWatch?.length || filmsToWatch?.length === 0) ? (
-        <h1 style={{ margin: '16px 0' }}>Add films to your watchlist.</h1>
+      <h1 className='pageHeader'>Potential Candidates</h1>
+      {(!candidatesToSave.length || candidatesToSave.length === 0) ? (
+        <h1 style={{ margin: '16px 0' }}>Add candidates to your watchlist.</h1>
       ) : (
-        <FilmsToWatchList
-          filmsToWatch={filmsToWatch}
+        <CandidateSearch
+          candidatesToSave={candidatesToSave}
           removeFromStorage={removeFromStorage}
         />
       )}
@@ -77,4 +64,8 @@ const WatchList = () => {
   );
 };
 
-export default SavedCandidates;
+export default SavedList;
+
+
+
+

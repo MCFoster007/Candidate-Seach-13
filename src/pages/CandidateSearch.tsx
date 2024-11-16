@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { searchGithub } from '../api/API'; 
+import SavedCandidates from './pages/SavedCandidates.tsx';
 import CandidateCard from './components/CandidateCard';
+import type Candidate from '../utils/interfaces/Candidate.interface';
+
 
 const CandidateSearch: React.FC = () => {
   const [currentCandidate, setCurrentCandidate] = useState<Candidate | null>(null);
