@@ -6,10 +6,10 @@ export interface Candidate {
     username: string;
     location: string | null; 
     avatar: string; 
-    email: string | null; 
+    email?: string | null; 
     html_url: string; 
-    company: string | null; 
-    bio: string | null; 
+    company?: string | null; 
+    bio?: string | null; 
     followers: number; 
     following: number; 
     public_repos: number; 
