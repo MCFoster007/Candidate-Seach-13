@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { searchGithub } from '../api/API'; 
-import SavedCandidates from './pages/SavedCandidates.tsx';
-import CandidateCard from './components/CandidateCard';
-import type Candidate from '../utils/interfaces/Candidate.interface';
+
+import CandidateCard from '../components/CandidateCard';
+import type {Candidate} from '../interfaces/Candidate.interface';
 
 
 const CandidateSearch: React.FC = () => {
@@ -75,4 +75,4 @@ const CandidateSearch: React.FC = () => {
 };
 
 
-
+export default CandidateSearch;

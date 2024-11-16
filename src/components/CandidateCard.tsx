@@ -1,3 +1,5 @@
+import type {Candidate} from '../interfaces/Candidate.interface';
+
 interface CandidateCardProps {
   candidate: Candidate;
   onSave: () => void;

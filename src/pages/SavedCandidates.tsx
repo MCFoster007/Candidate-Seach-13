@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import CandidateSearch from './pages/CandidateSearch.tsx';
-import type Candidate from '../utils/interfaces/Candidate.interface';
-import CandidateCard from './components/CandidateCard';
+
+import type {Candidate} from '../interfaces/Candidate.interface';
+
 
 const SavedList = () => {
   
@@ -21,7 +21,7 @@ const SavedList = () => {
         parsedFilmsToWatch = JSON.parse(storedFilmsToWatch);
       }
       const updatedCandidates = parsedFilmsToWatch.filter(
-        (candidate) => candidate.Name !== name
+        (candidate) => candidate.name !== name
       );
       setCandidatesToSave(updatedCandidates);
       localStorage.setItem('CandidatesToSave', JSON.stringify(updatedCandidates));
@@ -32,7 +32,7 @@ const SavedList = () => {
         parsedAlreadySavedCandidates = JSON.parse(storedAlreadySavedCandidates);
       }
       const updatedSavedCandidates = parsedAlreadySavedCandidates.filter(
-        (candidate) => candidate.Name !== name
+        (candidate) => candidate.name !== name
       );
       localStorage.setItem(
         'alreadySavedCandidates',
@@ -58,6 +58,8 @@ const SavedList = () => {
         <CandidateSearch
           candidatesToSave={candidatesToSave}
           removeFromStorage={removeFromStorage}
+
+          
         />
       )}
     </>
