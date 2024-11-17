@@ -12,7 +12,10 @@ const CandidateCard: React.FC<CandidateCardProps> = ({ candidate, onSave, onSkip
       <img src={candidate.avatar_url} alt={`${candidate.login}'s avatar`} />
       <h2>{candidate.login}</h2>
       <p>Login: {candidate.login}</p>
-      <p>Repos: {candidate.repos_url|| 'N/A'}</p>
+
+      <a href={candidate.followers_url} target="_blank" rel="noopener noreferrer">
+        GitHub Followers
+      </a>
       <p>Id: {candidate.id || 'N/A'}</p>
       <p>Email: {candidate.email || 'N/A'}</p>
       <a href={candidate.html_url} target="_blank" rel="noopener noreferrer">
