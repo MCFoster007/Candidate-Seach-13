@@ -9,11 +9,11 @@ interface CandidateCardProps {
 const CandidateCard: React.FC<CandidateCardProps> = ({ candidate, onSave, onSkip }) => {
   return (
     <div className="candidate-card">
-      <img src={candidate.avatar} alt={`${candidate.name}'s avatar`} />
-      <h2>{candidate.name}</h2>
-      <p>Username: {candidate.username}</p>
-      <p>Location: {candidate.location || 'N/A'}</p>
-      <p>Company: {candidate.company || 'N/A'}</p>
+      <img src={candidate.avatar_url} alt={`${candidate.login}'s avatar`} />
+      <h2>{candidate.login}</h2>
+      <p>Login: {candidate.login}</p>
+      <p>HTML: {candidate.html_url || 'N/A'}</p>
+      <p>Id: {candidate.id || 'N/A'}</p>
       <p>Email: {candidate.email || 'N/A'}</p>
       <a href={candidate.html_url} target="_blank" rel="noopener noreferrer">
         GitHub Profile

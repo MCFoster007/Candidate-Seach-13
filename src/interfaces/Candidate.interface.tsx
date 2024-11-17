@@ -3,9 +3,9 @@
 export interface Candidate {
     id: string; 
     name: string;
-    username: string;
+    login: string;
     location: string | null; 
-    avatar: string; 
+    avatar_url: string; 
     email?: string | null; 
     html_url: string; 
     company?: string | null; 

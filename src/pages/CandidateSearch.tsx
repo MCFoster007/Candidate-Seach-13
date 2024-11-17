@@ -24,6 +24,7 @@ const CandidateSearch: React.FC = () => {
     setError(null);
     try {
       const data = await searchGithub();
+     
       if (data.length > 0) {
         setCandidatesQueue(data); 
         setCurrentCandidate(data[0]); 
@@ -39,7 +40,8 @@ const CandidateSearch: React.FC = () => {
 
   useEffect(() => {
     fetchCandidates();
-  }, []);
+    
+  },[] );
 
   const handleSaveCandidate = () => {
     if (currentCandidate) {

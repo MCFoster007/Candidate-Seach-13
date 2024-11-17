@@ -1,19 +1,18 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Outlet} from 'react-router-dom';// wraps the browser routing from main.tsx like a package.
 import Nav from './components/Nav';
-import Home from './pages/home';
-import PotentialCandidates from './pages/PotentialCandidates';
+
 
 const App = () => {
   return (
-    <BrowserRouter>
+   <>
+   
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/potential-candidates" element={<PotentialCandidates />} />
+      <main>
+       <Outlet/>
       
   
-      </Routes>
-    </BrowserRouter>
+      </main>
+      </>
   );
 };
 

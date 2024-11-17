@@ -6,6 +6,8 @@ import App from './App.tsx';
 import CandidateSearch from './pages/CandidateSearch.tsx';
 import SavedCandidates from './pages/SavedCandidates.tsx';
 import ErrorPage from './pages/ErrorPage.tsx';
+import Home from './pages/home';
+import PotentialCandidates from './pages/PotentialCandidates';
 
 const router = createBrowserRouter([
   {
@@ -15,11 +17,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <CandidateSearch />,
+        element: <Home />,
       },
       {
         path: '/SavedCandidates',
         element: <SavedCandidates />,
+      },
+      {
+        path: '/CandidateSearch',
+        element: <CandidateSearch />,
+      },
+      {
+        path: '/PotentialCandidates',
+        element: <PotentialCandidates />,
       },
     ],
   },
