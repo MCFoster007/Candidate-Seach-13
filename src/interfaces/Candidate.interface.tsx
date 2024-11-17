@@ -15,4 +15,5 @@ export interface Candidate {
     public_repos: number; 
     created_at: string; 
     updated_at: string; 
+    actions: string;
 }

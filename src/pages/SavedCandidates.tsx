@@ -65,11 +65,11 @@ const SavedList = () => {
             <thead>
               <tr>
                 <th>Avatar</th>
-                <th>Name</th>
-                <th>Location</th>
+                <th>Login</th>
+                <th>Followers</th>
+                <th>Id</th>
                 <th>Email</th>
-                <th>Company</th>
-                <th>Bio</th>
+                <th>URL</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -78,16 +78,16 @@ const SavedList = () => {
                 <tr key={candidate.id}>
                   <td>
                     <img
-                      src={candidate.avatar}
-                      alt={`${candidate.name}'s avatar`}
+                      src={candidate.avatar_url}
+                      alt={`${candidate.login}'s avatar`}
                       style={{ width: "50px", borderRadius: "50%" }}
                     />
                   </td>
-                  <td>{candidate.name}</td>
-                  <td>{candidate.location}</td>
+                  <td>{candidate.followers_url}</td>
+                  <td>{candidate.id}</td>
                   <td>{candidate.email || "N/A"}</td>
-                  <td>{candidate.company || "N/A"}</td>
-                  <td>{candidate.bio || "N/A"}</td>
+                  <td>{candidate.html_url || "N/A"}</td>
+                  <td>{candidate.actions || "N/A"}</td>
                   <td>
                     <a
                       href={candidate.html_url}
