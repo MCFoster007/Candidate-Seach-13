@@ -10,9 +10,60 @@ const Nav = () => {
         <li>
           <Link to="/potential-candidates">Potential Candidates</Link>
         </li>
+        <li>
+          <Link to="/candidate-search">Candidate Search</Link>
+        </li>
       </ul>
     </nav>
   );
 };
 
 export default Nav;
+
+
+
+
+
+
+
+//test this methos to see if it works
+
+// function Nav({ currentPage, handlePageChange }) {
+//   return (
+//     <ul className="nav nav-tabs">
+//       <li className="nav-item">
+//         <a
+//           href="#Home"
+//           onClick={() => handlePageChange('Home')}
+
+//           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+//         >
+//           Home
+//         </a>
+//       </li>
+//       <li className="nav-item">
+//         <a
+//           href="#Potential Candidates"
+//           onClick={() => handlePageChange('Potential Candidates')}
+ 
+//           className={currentPage === 'Potential Candidates' ? 'nav-link active' : 'nav-link'}
+//         >
+//           Potential Candidates
+//         </a>
+//       </li>
+//       <li className="nav-item">
+//         <a
+//           href="#Candidate Search"
+//           onClick={() => handlePageChange('Candidate Search')}
+ 
+//           className={currentPage === 'Candidate Search' ? 'nav-link active' : 'nav-link'}
+//         >
+//           Candidate Search
+//         </a>
+//       </li>
+      
+//     </ul>
+//   );
+// }
+
+// export default Nav;
