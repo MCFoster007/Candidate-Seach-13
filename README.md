@@ -1,16 +1,6 @@
 # Candidated Search 
 
-
-
 <div align="center">
-
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Contributors](https://img.shields.io/github/contributors/404pandas/project-2-setup-guide.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/project-2-setup-guide/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/404pandas/project-2-setup-guide.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/project-2-setup-guide/network/members)
-[![Stargazers](https://img.shields.io/github/stars/404pandas/project-2-setup-guide.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/project-2-setup-guide/stargazers)
-
-
 
 </div>
 
@@ -26,7 +16,7 @@ about app
   </p>
 </div>
 
-  [Netlify Deployment]()
+  [Netlify Deployment- Candidate Search](https://app.netlify.com/sites/candidatesearch13/overview#:~:text=https%3A//candidatesearch13.netlify.app)
 
       
  
@@ -59,8 +49,7 @@ about app
 ## About The Project
 
 
-<!-- add about the project  -->
-[walkthru]()
+This project was about doing a 
 
 ![first](.png)
 
@@ -82,7 +71,7 @@ This project was built using React, JS
 [![CSS](https://img.shields.io/badge/Language-CSS-ff8000?style=plastic&logo=CSS3&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![VS Code](https://img.shields.io/badge/IDE-VSCode-0000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://code.visualstudio.com/docs)
 [![React](https://img.shields.io/badge/Language-React-ff0000?style=plastic&logo=React&logoWidth=10)](https://react.info/)
-
+[![Vite](https://img.shields.io/badge/Language-Vite-ff8000?style=plastic&logo=React&logoWidth=10)](https://vite.info/)
 
 </div>
 
@@ -151,6 +140,7 @@ Don't forget to give the project a star! Thanks again!
 
 This project is licensed under the MIT license.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contact
 

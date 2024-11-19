@@ -70,7 +70,6 @@ const SavedList = () => {
                 <th>Id</th>
                 <th>Email</th>
                 <th>URL</th>
-                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -87,7 +86,6 @@ const SavedList = () => {
                   <td>{candidate.id}</td>
                   <td>{candidate.email || "N/A"}</td>
                   <td>{candidate.html_url || "N/A"}</td>
-                  <td>{candidate.actions || "N/A"}</td>
                   <td>
                     <a
                       href={candidate.html_url}

@@ -21,8 +21,8 @@ const CandidateCard: React.FC<CandidateCardProps> = ({ candidate, onSave, onSkip
         GitHub Profile
       </a>
       <div>
-        <button onClick={onSave}>Save</button>
-        <button onClick={onSkip}>Delete</button>
+        <button onClick={onSave}>+</button>
+        <button onClick={onSkip}>-</button>
       </div>
     </div>
   );
