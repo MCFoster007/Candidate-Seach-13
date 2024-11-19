@@ -48,19 +48,21 @@ about app
 
 ## About The Project
 
+This project is a candidate search application designed to help users identify and save the best candidates for potential hiring. The application displays detailed information about candidates, including their username, avatar, email, followers, and profile URL. Users can save a candidate to a list of potential hires by clicking a "+" button or skip to the next candidate using a "-" button. If no candidates are available to review, a message is displayed. The list of saved candidates is viewable on a dedicated page, persists across page reloads, and includes all relevant candidate details.
 
-This project was about doing a 
+![Home Page](./Assets/images/homepg.png)
+ 
+![Candidate Search](./Assets/images/candidatesearch.png)
 
-![first](.png)
+![Potential Candidates](./Assets/images/potentialcandidates.png)
 
-![second](..png)
+![Local Storage](./Assets/images/localstorage.png)
 
-![third](..png)
+![Local Storage](./Assets/images/localstorage2.png)
 
-![fourth](.png)
+![No More Candidates](./Assets/images/nomorecandidatestoreview.png)
 
-
-This project was built using React, JS
+This project was built using React, JS, CSS, VS code & Vite
 
 ### Built With
 
@@ -68,10 +70,11 @@ This project was built using React, JS
 
 
 [![Javascript](https://img.shields.io/badge/Language-JavaScript-ff0000?style=plastic&logo=JavaScript&logoWidth=10)](https://javascript.info/)
+[![Typescript](https://img.shields.io/badge/Language-TypeScript-0000ff?style=plastic&logo=TypeScript&logoWidth=10)](https://typecript.info/)
 [![CSS](https://img.shields.io/badge/Language-CSS-ff8000?style=plastic&logo=CSS3&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![VS Code](https://img.shields.io/badge/IDE-VSCode-0000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://code.visualstudio.com/docs)
 [![React](https://img.shields.io/badge/Language-React-ff0000?style=plastic&logo=React&logoWidth=10)](https://react.info/)
-[![Vite](https://img.shields.io/badge/Language-Vite-ff8000?style=plastic&logo=React&logoWidth=10)](https://vite.info/)
+[![Vite](https://img.shields.io/badge/Language-Vite-ff8000?style=plastic&logo=Vite&logoWidth=10)](https://vite.info/)
 
 </div>
 
@@ -98,10 +101,11 @@ npm i
 3. Launch the app in development environment
 
 ```
-npm run start
+npm run build
+npm run dev
 ```
 
-4. It will show running on localhost:3000 in your browser
+4. It will show running on netlify
 
 
 #### MVP
@@ -114,11 +118,11 @@ npm run start
     - [ ] Styling
 
 
-#### Future Development
+<!-- #### Future Development
 
 - [ ]
 - [ ]
-- [ ]
+- [ ] -->
 
 
 ## Contributing
@@ -149,17 +153,17 @@ This project is licensed under the MIT license.
 
 Project Links:
 
-[Github Repository](https://github.com/MCFoster007/)
+[Github Repository](https://github.com/MCFoster007/Candidate-Seach-13)
 
-[Github Pages Deployment]( https://mcfoster007.github.io//)
+[Github Pages Deployment](https://mcfoster007.github.io/Candidate-Seach-13/)
 
 
-[Netlify Deployment]()
+[Netlify Deployment](https://candidatesearch13.netlify.app)
 
 
 
 ## Acknowledgments
-Thank my tutors who helped me and guided me.
+Thank you to my tutors and instructor who helped me and guided me.
 
 
 
