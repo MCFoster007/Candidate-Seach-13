@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import type { Candidate } from "../interfaces/Candidate.interface";
 
 const PotentialCandidates = () => {
-  const [savedCandidates, setSavedCandidates] = useState([]);
+  const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
 
   useEffect(() => {
     try {
@@ -21,6 +21,7 @@ const PotentialCandidates = () => {
   // Render this if there are saved candidates
   <div>
     {savedCandidates.map(candidate => (
+   
       <div key={candidate.id}>{candidate.login}</div>
     ))}
   </div>

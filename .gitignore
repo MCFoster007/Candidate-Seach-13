@@ -138,3 +138,5 @@ cypress/reports
 
 # ENV
 *.env
+# Local Netlify folder
+.netlify

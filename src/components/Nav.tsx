@@ -8,10 +8,10 @@ const Nav = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/potential-candidates">Potential Candidates</Link>
+          <Link to="/PotentialCandidates">Potential Candidates</Link>
         </li>
         <li>
-          <Link to="/candidate-search">Candidate Search</Link>
+          <Link to="/CandidateSearch">Candidate Search</Link>
         </li>
       </ul>
     </nav>
